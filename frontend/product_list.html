@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini BoxDrop</title>
+
+
+    <!-- CSS -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
+    <!-- Outros recursos comuns como CSS ou JavaScript podem ser adicionados aqui -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+
+<body>
+      <!-- Navbar or Header comes here -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mini BoxDrop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product_list.html">Produtos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Minha Conta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="user_login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="user_register.html">Cadastro</a></li>
+                            <l><a class="dropdown-item" href="user_settings.html">Configurações</a></li>
+                            <li><a class="dropdown-item" href="user_logout.html">Logout</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle block" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Ajuda
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalSobre">Sobre</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <span class="navbar-text">
+                    Olá! <strong id="name_user">Visitante</strong>
+                </span>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Meus Produtos Mini BoxDrop!</h1>
+            <p class="lead">Sua plataforma de gerenciamento de produtos com anexos.</p>
+            <hr class="my-4">
+
+            <div class="container">
+                <h2 class="my-4">Meus Produtos</h2>
+                <a href="product_add.html" class="btn btn-primary">Novo produto</a>
+                <br>
+                <br>
+
+
+                <div class="table-responsive">
+                    <table id="productsTable" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Arquivo anexo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <!-- Rows will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br>
+
+
+        </div>
+    </main>
+    <!-- Navbar or Header comes here -->
+
+    <footer class="bg text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Mini BoxDrop:
+            <a class="text" href="#">Mini BoxDrop.com</a>
+        </div>
+    </footer>
+
+
+
+    <!-- Modal Sobre -->
+    <div class="modal fade" id="modalSobre" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalSobreLabel">Sobre</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Mini BoxDrop Application 1.0.0</p>
+
+                    <p>
+                        A aplicação foi desenvolvida para gerenciar produtos. O sistema permite o cadastro, edição. O
+                        sistema usa
+                        HTML, CSS, Bootstrap, JavaScript e Bootstrap.
+                        A idéia principal do sistema é permitir que o usuário possa cadastrar produtos, editar e excluir
+                        produtos
+                        com anexos. Assim, um usuário pode ter um controle maior sobre os produtos que ele tem em
+                        estoque.
+                        O sistema pode ser usado para hospedar cursos online, aulas, palestras, seminários, etc. Após o
+                        cadastro, o
+                        usuário pode fazer o upload de arquivos de vídeo, áudio, pdf, etc. O sistema também permite que
+                        o usuário
+                        faça o download dos arquivos que ele enviou.
+                    </p>
+
+                    <p>Developed by: <strong>Mário de Araújo Carvalho</strong></p>
+
+
+                    <p>Email:
+                        <strong>
+                            <a href="mailto:mariodearaujocarvalho@gmail.com" target="_blank">
+                                mariodearaujocarvalho@gmail.com
+                            </a>
+                        </strong>
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Confimar Exclusão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Você tem certeza que deseja excluir este produto?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-danger" id="delete-confirm-btn">DELETAR</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.print.min.js"></script>
+
+    <script src="static/js/scripts.js"></script>
+
+
+    <script>
+        let session = localStorage.getItem('session_user');
+        // String to Object
+        session = JSON.parse(session);
+        if (!session || !session.logged) {
+            window.location.href = 'user_login.html';
+        }
+        document.getElementById("name_user").innerHTML = session.user.name;
+    </script>
+
+    <script>
+        async function deleteData(id) {
+            const url = "http://127.0.0.1:5000/product/delete/" + id;
+
+
+            try {
+                const response = await fetch(url, {
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                // Vai para a página de produtos
+                window.location.href = 'product_list.html';
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+
+
+        async function fetchProducts() {
+            const url = "http://127.0.0.1:5000/product/list_user/" + session.user.id;
+
+            try {
+                const response = await fetch(url, {
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                populateTable(data);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+
+        function populateTable(data) {
+            const tableBody = document.getElementById('productsTableBody');
+            tableBody.innerHTML = ''; // Clear existing table data
+
+            data.data.forEach(product => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                                <td>${product.id}</td>
+                                <td>${product.name}</td>
+                                <td>${product.description}</td>
+                                <td>
+                                    <a href="http://127.0.0.1:5000/static/uploads/${product.file_zip_path}" class="btn-primary btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Download</a>
+                                </td>
+                                <td>
+                                    <a href="product_edit.html?id=${product.id}" class="btn btn-primary">Editar</a>
+                                    <a href="#" class="btn btn-danger delete-btn" onclick="confirmDelete('${product.id}')">Deletar</a>
+                                </td>
+                                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        var clientesTable = createDataTable('#productsTable');
+
+
+        // Example usage: Call fetchProducts when the page loads
+        document.addEventListener('DOMContentLoaded', fetchProducts);
+
+    </script>
+</body>
+
+</html>
